@@ -9,9 +9,8 @@ services:
     depends_on: 
       - db
   db:
-    build: 
-        context: .
-        dockerfile: Dockerfile-psql
+    db:
+    image: postgres:12.0-alpine
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:

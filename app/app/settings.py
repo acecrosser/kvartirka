@@ -86,20 +86,31 @@ WSGI_APPLICATION = 'app.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'default': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': str(os.getenv('NAME_DB')),
-    #     'USER': str(os.getenv('USER')),
-    #     'PASSWORD': str(os.getenv('PASSWORD')),
-    #     'HOST': str(os.getenv('HOST')),
-    #     'PORT': str(os.getenv('PORT'))
-    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': str(os.getenv('NAME_DB')),
+        'USER': str(os.getenv('USER')),
+        'PASSWORD': str(os.getenv('PASSWORD')),
+        'HOST': str(os.getenv('HOST')),
+        'PORT': str(os.getenv('PORT'))
     }
 }
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': str(os.getenv('NAME_DB')),
+#         'USER': str(os.getenv('USER')),
+#         'PASSWORD': str(os.getenv('PASSWORD')),
+#         'HOST': str(os.getenv('HOST')),
+#         'PORT': str(os.getenv('PORT'))
+#     }
+#     # 'default': {
+#     #     'ENGINE': 'django.db.backends.sqlite3',
+#     #     'NAME': BASE_DIR / 'db.sqlite3',
+#     # }
+# }
 
 
 # Password validation
