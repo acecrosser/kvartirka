@@ -9,7 +9,7 @@ class Post(models.Model):
 
     class Meta:
 
-        ordering = ('-created', )
+        ordering = ('created', )
 
     def __str__(self):
         return self.title
@@ -23,7 +23,7 @@ class Comments(models.Model):
     parent = models.ForeignKey('self', null=True, blank=True, related_name='children', on_delete=models.DO_NOTHING)
 
     class Meta:
-        ordering = ('-created', )
+        ordering = ('created', )
 
     def __str__(self):
         return self.text

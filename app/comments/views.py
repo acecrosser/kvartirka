@@ -1,10 +1,9 @@
-from re import search
 from rest_framework import status
-from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 from .serializers import BlogPostSerializer, CommentsSerializer
 from .serializers import CommentsThreeInPost, CommentsThree, PostSerializerPost
+
 from .models import Post, Comments
 
 
@@ -72,6 +71,3 @@ class PostShowThreeComments(ModelViewSet):
         post = Post.objects.get(id=pk)
         serializer = CommentsThreeInPost(post)
         return Response(serializer.data, status=status.HTTP_200_OK)
-
-        
-
