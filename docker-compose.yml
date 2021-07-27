@@ -5,3 +5,16 @@ services:
     command: python manage.py runserver 0.0.0.0:8000
     ports:
       - 8000:8000
+    depends_on: 
+      - db
+
+  db:
+    build: 
+        context: .
+        dockerfile: Dockerfile-psql
+    volumes:
+        - postgres_data:/var/lib/postgresql/data/
+        environment:
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=postgres
+        - POSTGRES_DB=api_postgres
