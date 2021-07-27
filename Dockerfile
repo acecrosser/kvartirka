@@ -5,5 +5,6 @@ RUN apk update \
 RUN pip install --upgrade pip
 COPY ./requirements.txt .
 RUN pip install -r requirements.txt
+COPY ./entrypoint.sh .
 COPY . /usr/src
-
+ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
