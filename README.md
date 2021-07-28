@@ -74,4 +74,4 @@
     }
     
 
-По возникшим вопросам пишите в телеграм [@acecrooser](https://t.me/acecrosser)
+По возникшим вопросам пишите в телеграм [@acecrosser](https://t.me/acecrosser)
